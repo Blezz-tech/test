@@ -7,10 +7,10 @@ counter=$(date +%s)
 echo $counter
 
 for file in $files; do
-    echo "Обрабатываем файл: $file"
-
+    extension="${file##*.}"
+    name="${filename%.*}"
+    mv $file "$name $counter.$extension"
     ((counter+=1))
-    echo $counter
 done
 
 

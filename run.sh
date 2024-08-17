@@ -8,7 +8,7 @@ echo $counter
 
 for file in $files; do
     extension="${file##*.}"
-    name="${filename%.*}"
+    name="${file%.*}"
     mv $file "$name $counter.$extension"
     ((counter+=1))
 done
